@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Steam Family Eligibility Check</title>
+  <style>
+    body {
+      background: #0b0e14;
+      color: #c7d5e0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: #171a21;
+      padding: 30px;
+      border-radius: 8px;
+      width: 420px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+    .loader {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Steam Family Sharing</h2>
+    <p>Checking eligibility…</p>
+    <div class="loader">⏳ Verifying account data</div>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("result").innerHTML =
+        "<br><b style='color:#ff5555'>❌ Access Denied</b><br><br>Reason: Skill issue detected.<br>You are not eligible for Steam Family.";
+    }, 3000);
+  </script>
+</body>
+</html>
